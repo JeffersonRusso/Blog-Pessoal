@@ -1,4 +1,4 @@
-package com.blog.blog.controller;
+package com.blogPessoal.MeuBlog.controller;
 
 import java.util.List;
 
@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.blog.blog.model.Postagem;
-import com.blog.blog.repository.PostagemRepository;
+import com.blogPessoal.MeuBlog.model.Postagem;
+import com.blogPessoal.MeuBlog.repository.PostagemRepository;
 
 @RestController
 @RequestMapping ("/postagens")
@@ -31,7 +31,6 @@ public class PostagemController {
 	{
 		return ResponseEntity.ok(repository.findAll());			
 	}
-	
 	@GetMapping("/{id}")
 	public ResponseEntity<Postagem> GetById(@PathVariable long id)
 	{
@@ -39,7 +38,6 @@ public class PostagemController {
 				.map(resp -> ResponseEntity.ok(resp))
 				.orElse(ResponseEntity.notFound().build());
 	}
-	
 	@GetMapping("/titulo/{titulo}")
 	public ResponseEntity<List<Postagem>> GetByTitulo(@PathVariable String titulo)
 	{
@@ -63,4 +61,5 @@ public class PostagemController {
 	{
 		repository.deleteById(id);
 	}
+	
 }
