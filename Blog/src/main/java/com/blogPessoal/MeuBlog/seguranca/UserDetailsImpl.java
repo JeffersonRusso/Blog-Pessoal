@@ -8,6 +8,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import com.blogPessoal.MeuBlog.model.Usuario;
 
+
+
 public class UserDetailsImpl implements UserDetails{
 	private static final long serialVersionUID = 1L;
 

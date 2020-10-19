@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import com.blogPessoal.MeuBlog.model.Usuario;
 import com.blogPessoal.MeuBlog.repository.UsuarioRepository;
 
+
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 
